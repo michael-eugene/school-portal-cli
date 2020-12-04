@@ -16,6 +16,21 @@ staffs_db = [
   },
 ]
 
+students_db = [
+  {
+    username: "youthisboy",
+    password: "topsecret"
+  },
+  {
+    username: "tomiszn",
+    password: "topsecret"
+  },
+  {
+    username: "anis",
+    password: "topsecret"
+  },
+]
+
 
 puts "Welcome To UNILAG"
 20.times {print "-"}
@@ -40,11 +55,11 @@ def login(param, users_db)
       if user[:password] == password
         return "There was a match"
       else
-        return "Sorry the password was incorrect for the user #{user[:username]}"
+        return "Sorry the password was incorrect for the #{param} \"#{user[:username]}\""
       end
     end
   end
-  return "Sorry no user by that username found."
+  return "Sorry no #{param} by the username \"#{username}\" found."
 end
 
 
